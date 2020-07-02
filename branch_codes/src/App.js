@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import branchCodes from './branch_codes.js'
+import Codes from './components/codes.js'
 
 function App() {
   return (
@@ -8,6 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+        <Codes codes={branchCodes} />
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
