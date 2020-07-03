@@ -20,13 +20,15 @@ class Codes extends React.Component {
       <div>
       <input
       type="text"
-      focus placeholder="Enter Branch ie..'Bronx Library Center'"
+      focus={true}
+      placeholder="Enter Branch ie..'Bronx Library Center'"
       className=""
       onChange={evt => this.setState({ fullBranchInput: evt.target.value })}
       /> | | &nbsp;
       <input
       type="text"
-      focus placeholder="Enter Branch Code ie..'BLC'"
+      focus={true}
+      placeholder="Enter Branch Code ie..'BLC'"
       className=""
       onChange={evt => this.setState({ codeBranchInput: evt.target.value })}
       />
