@@ -8,6 +8,7 @@ class Codes extends React.Component {
       fullBranchInput : '',
       codeBranchInput: ''
     }
+    this.filterCodes = this.filterCodes.bind(this)
   }
 
   render(){
@@ -31,6 +32,17 @@ class Codes extends React.Component {
          {branchAsProps.map((item)=><li key={item+1}>{item} : {branches[item]}</li>)}
       </div>
     )
+  }
+
+  filterCodes (code) {
+    const branches = this.props.branches;
+
+    const branchInput = new RegExp(this.state.fullBranchInput, 'i');
+    const branchCodeInput = new RegExp(this.state.codeBranchInput, 'i');
+
+    return branchInput.test(branches)
+      && branchCodeInput.test(branches)
+
   }
 
 
