@@ -23,7 +23,7 @@ class Codes extends React.Component {
       focus placeholder="Enter Branch ie..'Bronx Library Center'"
       className=""
       onChange={evt => this.setState({ fullBranchInput: evt.target.value })}
-      /> | |
+      /> | | &nbsp;
       <input
       type="text"
       focus placeholder="Enter Branch Code ie..'BLC'"
@@ -31,10 +31,8 @@ class Codes extends React.Component {
       onChange={evt => this.setState({ codeBranchInput: evt.target.value })}
       />
       <ul>
-    { branches.map((obj)=> {
-      let object = JSON.parse(obj);
-      return <li key={Object.keys(object)+1}> {Object.keys(object)} : {object[Object.keys(object)]}</li>
-      })
+    { branches.map((object)=> <li key={Object.keys(object)+1}> {Object.keys(object)} : {object[Object.keys(object)]}</li>
+      )
     }
          {/* branchAsProps.map((item)=><li key={item+1}>{Object.getOwnPropertyNames(item)} : {branches[item]}</li>) */}
       </ul>
