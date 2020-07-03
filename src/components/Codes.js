@@ -1,16 +1,14 @@
 import React from 'react';
 
 class Codes extends React.Component {
-  constructor(props){
-    super(props);
-  }
 
   render(){
     const branches = this.props.branches
+    const branchAsProps = Object.getOwnPropertyNames(this.props.branches)
 
     return (
       <div>
-        {branches['Great Kills']}
+         {branchAsProps.map((item)=><li key={item+1}>{item} : {branches[item]}</li>)}
       </div>
     )
   }
