@@ -13,6 +13,7 @@ class Codes extends React.Component {
 
   render(){
     const branches = this.props.branches
+    console.log('branches: ',branches)
     const branchAsProps = Object.getOwnPropertyNames(branches)
 
     return (
@@ -22,14 +23,21 @@ class Codes extends React.Component {
       focus placeholder="Enter Branch ie..'Bronx Library Center'"
       className=""
       onChange={evt => this.setState({ fullBranchInput: evt.target.value })}
-      /> |
+      /> | |
       <input
       type="text"
       focus placeholder="Enter Branch Code ie..'BLC'"
       className=""
       onChange={evt => this.setState({ codeBranchInput: evt.target.value })}
       />
-         {branchAsProps.map((item)=><li key={item+1}>{item} : {branches[item]}</li>)}
+      <ul>
+    { branches.map((obj)=> {
+      let object = JSON.parse(obj);
+      return <li key={Object.keys(object)+1}> {Object.keys(object)} : {object[Object.keys(object)]}</li>
+      })
+    }
+         {/* branchAsProps.map((item)=><li key={item+1}>{Object.getOwnPropertyNames(item)} : {branches[item]}</li>) */}
+      </ul>
       </div>
     )
   }

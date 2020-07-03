@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import branchCodes from './branchCodes.js'
+import data from './codesData/data.js'
 import Codes from './components/Codes.js'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>
-        <Codes branches={branchCodes} />
+        <Codes branches={data} />
         </div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
