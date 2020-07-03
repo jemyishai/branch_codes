@@ -1,14 +1,17 @@
 import React from 'react';
 
-class Codes extends class React.component (){
+class Codes extends React.component (){
   constructor(props){
-    super(props)
+    super(props);
+
   }
 
 
   render(){
     return (
-      {this.props.codes}
+      <div>
+        {this.props.branches}
+      </div>
     )
   }
 
