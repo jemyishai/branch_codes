@@ -14,27 +14,25 @@ class Codes extends React.Component {
   render(){
     const branches = this.props.branches
     console.log('branches: ',branches)
-    const branchAsProps = Object.getOwnPropertyNames(branches)
 
     return (
       <div>
       <input
       type="text"
-      focus={true}
+      focus="true"
       placeholder="Enter Branch ie..'Bronx Library Center'"
       className=""
       onChange={evt => this.setState({ fullBranchInput: evt.target.value })}
       /> | | &nbsp;
       <input
       type="text"
-      focus={true}
+      focus="true"
       placeholder="Enter Branch Code ie..'BLC'"
       className=""
       onChange={evt => this.setState({ codeBranchInput: evt.target.value })}
       />
       <ul>
-    { branches.map((object)=> <li key={Object.keys(object)+1}> {Object.keys(object)} : {object[Object.keys(object)]}</li>
-      )
+    { branches.map((object)=> <li key={object.branch+1}> {object.branch} : {object.code}</li>)
     }
          {/* branchAsProps.map((item)=><li key={item+1}>{Object.getOwnPropertyNames(item)} : {branches[item]}</li>) */}
       </ul>
@@ -42,14 +40,13 @@ class Codes extends React.Component {
     )
   }
 
-  filterCodes (code) {
-    const branches = this.props.branches;
+  filterCodes (input) {
 
     const branchInput = new RegExp(this.state.fullBranchInput, 'i');
     const branchCodeInput = new RegExp(this.state.codeBranchInput, 'i');
 
-    return branchInput.test(branches)
-      && branchCodeInput.test(branches)
+    return branchInput.test(input.branch)
+      && branchCodeInput.test(input.code)
 
   }
 
