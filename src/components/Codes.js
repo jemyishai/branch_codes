@@ -32,7 +32,7 @@ class Codes extends React.Component {
       onChange={evt => this.setState({ codeBranchInput: evt.target.value })}
       />
       <ul>
-    { branches.map((object)=> <li key={object.branch+1}> {object.branch} : {object.code}</li>)
+    { branches.filter(this.filterCodes).map((object)=> <li key={object.branch+1}> {object.branch} : {object.code}</li>)
     }
          {/* branchAsProps.map((item)=><li key={item+1}>{Object.getOwnPropertyNames(item)} : {branches[item]}</li>) */}
       </ul>
