@@ -1,56 +1,52 @@
 import React from 'react';
+import Input from './Input.js';
 
 class Codes extends React.Component {
-  constructor (props){
-    super(props)
+	constructor(props) {
+		super(props);
 
-    this.state = {
-      fullBranchInput : '',
-      codeBranchInput: ''
-    }
-    this.filterCodes = this.filterCodes.bind(this)
-  }
+		this.state = {
+			fullBranchInput: '',
+			codeBranchInput: '',
+		};
 
-  render(){
-    const branches = this.props.branches
-    console.log('branches: ',branches)
+		this.filterCodes = this.filterCodes.bind(this);
+    this.onChange = this.onChange.bind(this);
+	}
 
-    return (
-      <div>
-      <input
-      type="text"
-      focus="true"
-      placeholder="Enter Branch ie..'Bronx Library Center'"
-      className=""
-      onChange={evt => this.setState({ fullBranchInput: evt.target.value })}
-      /> | | &nbsp;
-      <input
-      type="text"
-      focus="true"
-      placeholder="Enter Branch Code ie..'BLC'"
-      className=""
-      onChange={evt => this.setState({ codeBranchInput: evt.target.value })}
-      />
-      <ul>
-    { branches.filter(this.filterCodes).map((object)=> <li key={object.branch+1}> {object.branch} : {object.code}</li>)
-    }
-         {/* branchAsProps.map((item)=><li key={item+1}>{Object.getOwnPropertyNames(item)} : {branches[item]}</li>) */}
-      </ul>
-      </div>
-    )
-  }
+	render() {
+		const branches = this.props.branches;
+		return (
+			<div>
+				<Input
+					placeholder={"Enter Branch ie..'Bronx Library Center'"}
+					change={(evt) => this.onChange(evt,'fullBranchInput')}
+				/>
+				 &nbsp; | | &nbsp;
+        <Input
+          placeholder={"Enter Branch Code ie..'BLC'"}
+          change={(evt) => this.onChange(evt, 'codeBranchInput')} />
+				<ul>
+					{branches.filter(this.filterCodes).map((object) => (
+						<li key={object.branch + 1}>
+							{object.branch} : {object.code}
+						</li>
+					))}
+				</ul>
+			</div>
+		);
+	}
 
-  filterCodes (input) {
+ filterCodes (input) {
+		const branchInput = new RegExp(this.state.fullBranchInput, 'i');
+		const branchCodeInput = new RegExp(this.state.codeBranchInput, 'i');
+		return branchInput.test(input.branch) && branchCodeInput.test(input.code);
+	}
 
-    const branchInput = new RegExp(this.state.fullBranchInput, 'i');
-    const branchCodeInput = new RegExp(this.state.codeBranchInput, 'i');
-
-    return branchInput.test(input.branch)
-      && branchCodeInput.test(input.code)
-
-  }
-
+  onChange(evt, second) {
+		this.setState({ [second]: evt.target.value });
+	}
 
 }
 
-export default Codes
+export default Codes;
