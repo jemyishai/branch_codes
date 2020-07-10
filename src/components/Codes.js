@@ -19,12 +19,12 @@ class Codes extends React.Component {
 		return (
 			<div>
 				<Input
-					placeholder={"Enter Branch ie..'Bronx Library Center'"}
+					placeholder={"Enter Branch ie... 'Bronx Library Center'"}
 					change={(evt) => this.onChange(evt, 'fullBranchInput')}
 				/>
-				&nbsp; | | &nbsp;
+				&nbsp; AND / OR &nbsp;
 				<Input
-					placeholder={"Enter Branch Code ie..'BLC'"}
+					placeholder={"Enter Branch Code ie... 'BLC'"}
 					change={(evt) => this.onChange(evt, 'codeBranchInput')}
 				/>
 				<ul>
