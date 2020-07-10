@@ -7,10 +7,11 @@ import HeaderText from './components/HeaderText';
 
 function App() {
 	return (
-		<div class=".nypl-homepage-hero" >
-			<div class=".box">
-				<Logo />
-				<HeaderText />
+		<div class="nypl-homepage-hero">
+			<div class="box">
+				<Logo class="float:left;background-color:clear "/>
+
+				<HeaderText class="float:right"/>
 			</div>
 			<Codes branches={data} />
 		</div>

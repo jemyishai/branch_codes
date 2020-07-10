@@ -24,7 +24,7 @@ class Codes extends React.Component {
 				/>
 				&nbsp; AND / OR &nbsp;
 				<Input
-					placeholder={"Type branch Code ie... 'BLC'"}
+					placeholder={"Type branch code ie... 'BLC'"}
 					change={(evt) => this.onChange(evt, 'codeBranchInput')}
 				/>
 				<ul>
