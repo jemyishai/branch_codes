@@ -17,21 +17,21 @@ class Codes extends React.Component {
 	render() {
 		const branches = this.props.branches;
 		return (
-			<div>
+			<div class="centered">
 				<Input
-					placeholder={"Enter Branch ie... 'Bronx Library Center'"}
+					placeholder={"Type branch ie... 'Bronx Library Center'"}
 					change={(evt) => this.onChange(evt, 'fullBranchInput')}
 				/>
 				&nbsp; AND / OR &nbsp;
 				<Input
-					placeholder={"Enter Branch Code ie... 'BLC'"}
+					placeholder={"Type branch Code ie... 'BLC'"}
 					change={(evt) => this.onChange(evt, 'codeBranchInput')}
 				/>
 				<ul>
 				{/*DOUBLE CHECK BRONX LIBRARY CENTER CODE*/}
 					{branches.filter(this.filterCodes).map((object) => (
 						<li key={object.branch + 1}>
-							{object.branch} : {object.code}
+							{object.branch} &nbsp; : &nbsp; {object.code}
 						</li>
 					))}
 				</ul>
