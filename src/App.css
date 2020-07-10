@@ -1,5 +1,5 @@
 
-/* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit */
+/* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit  - JM 07/10*/
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -919,7 +919,7 @@ dl dd.multi-item-list .nypl-basic-table button.disabled:hover, dl dd.multi-item-
   border-radius: 0;
   display: inline-block;
   fill: #080807;
-  height: 13em;
+  height: 6em;
   speak: none;
   width: 20em; }
 
