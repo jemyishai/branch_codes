@@ -2,7 +2,7 @@ import React from 'react';
 
 const Input = (props) => {
 	return (
-		<div class="nypl-text-field">
+		<div className="nypl-text-field">
 		<input
 			id="keyword-text"
 			type="text"

@@ -17,14 +17,14 @@ class Codes extends React.Component {
 	render() {
 		const branches = this.props.branches;
 		return (
-			<div class="centered">
+			<div className="centered">
 				<Input
 					placeholder={"Type branch ie... 'Bronx Library Center'"}
 					change={(evt) => this.onChange(evt, 'fullBranchInput')}
 				/>
 				&nbsp; AND / OR &nbsp;
 				<Input
-					placeholder={"Type branch code ie... 'BLC'"}
+					placeholder={"Type branch code ie... 'BC'"}
 					change={(evt) => this.onChange(evt, 'codeBranchInput')}
 				/>
 				<ul>

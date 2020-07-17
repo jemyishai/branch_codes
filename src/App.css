@@ -1,9 +1,28 @@
 
+/* Edited main html background-color to be similar to nypl-homepage-hero. Increased the saturation lightly.
+} */
+
+/* Logo and Header Directions on Same line */
+
 .box {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-content: flex-start;
 }
+
+.inner-padding {
+  margin: 1em;
+}
+
+.directions-padding {
+  padding: 0.5em 2em 0 2em ;
+  font-weight: 2em;
+}
+
+ul {
+  list-style-type: none;
+}
+
 
 /* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit  - JM 07/10*/
 
@@ -21,7 +40,8 @@
   -ms-text-size-adjust: 100%;
   /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 3 */ }
+  /* 3 */
+      }
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -493,7 +513,9 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.65;
-  background-color: #fff;
+  /* Following line added by JM */
+  background-color: hsl(30, 17%, 93%) ;
+  /* background-color: #fff; */
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
   -webkit-filter: none;
@@ -3963,7 +3985,8 @@ dl dd.multi-item-list .nypl-basic-table button.disabled:hover, dl dd.multi-item-
     margin: 0.5rem 0 0.75rem; } }
 
 .nypl-homepage-hero p {
-  font-weight: 200;
+  /* Commented out by JEM for branch code app */
+  /* font-weight: 200; */
   max-width: none; }
 
 @media (max-width: 965px) {

@@ -7,15 +7,19 @@ import HeaderText from './components/HeaderText';
 
 function App() {
 	return (
-		<div class="nypl-homepage-hero">
-			<div class="box">
-				<Logo class="float:left;background-color:clear "/>
-
-				<HeaderText class="float:right"/>
+		<div
+		className="inner-padding">
+			<div className="nypl-homepage-hero" >
+				<div className="box">
+					<Logo />
+					<HeaderText />
+				</div>
+			<Codes branches={data}  />
 			</div>
-			<Codes branches={data} />
 		</div>
 	);
 }
+
+{/* need to add a warning around regexp entires */}
 
 export default App;

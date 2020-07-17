@@ -3,9 +3,8 @@ import React from 'react';
 const HeaderText = () => {
 	return (
 		<div>
-			<p>
-				This is a tool for branch librarians to quickly find branch codes. Begin typing and the tool will filter
-				the list based on your input.
+			<p className='directions-padding'>
+				This is a tool for branch librarians to quickly find branch codes. Begin typing and your input will automatically filter the list below.
 			</p>
 		</div>
 	);

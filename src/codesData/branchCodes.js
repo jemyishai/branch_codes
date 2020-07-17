@@ -77,6 +77,7 @@ const branchCodes = {
 'St. Agnes': 'SA',
 'Seward Park':'SE',
 '67th Street':'SS',
+'Sixty Seventh': 'SS',
 'Tompkins Square':'TS',
 'Webster':'WB',
 'Washington Heights': 'WH',
@@ -104,6 +105,7 @@ const branchCodes = {
 'Humanities and Social Sciences': 'CRL',
 "NYPL Children's Center @ 42nd": 'MAJ',
 // 'SASB':'CC',
+//Children's Center - many SASB codes not included
 'World Land Orders':'CCD',
 '53rd Street': 'FT',
 'Fifty-Third':'FT',
@@ -120,6 +122,7 @@ const branchCodes = {
 'NYPL Research Libraries':'RC',
 'Schomburg Center':'SC',
 '39th ST - HR - Finance - Marketing':'TN',
+'Thirty ninth': 'TN',
 'Inter-Library Loan':'XFILL',
 'Collection Rebalancing':'XR',
 'Research Libraries - On Order': 'XXX',
