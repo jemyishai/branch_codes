@@ -15,16 +15,28 @@
 }
 
 .directions-padding {
-  padding: 0.5em 2em 0 2em ;
+  padding: 1.5em 2em 0 2em ;
   font-weight: 2em;
 }
 
 ul {
   list-style-type: none;
+  position: relative;
 }
 
+/* li{
+line 583 of this stylesheet was edited by Jesse
+} */
+
+@media (max-width: 483px) {
+  .box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; } }
 
 /* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit  - JM 07/10*/
+
+/* Tried to avoid edits to the below but everything below is was taken from nypl.org */
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -569,6 +581,8 @@ ol {
   padding: 0; }
 
 li {
+  /* this was edited by Jesse */
+  max-width: inherit;
   margin-left: 0.5rem; }
 
 code,
