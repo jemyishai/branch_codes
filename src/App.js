@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import data from './codesData/data.js';
+import data from './codesData/formattedData.js';
 import Codes from './components/Codes.js';
 import Logo from './components/Logo';
 import HeaderText from './components/HeaderText';
@@ -20,6 +20,6 @@ function App() {
 	);
 }
 
-{/* need to add a warning around regexp entires */}
+{/* need to add a warning around regexp entries */}
 
 export default App;

@@ -2,7 +2,7 @@
 /* Edited main html background-color to be similar to nypl-homepage-hero. Increased the saturation lightly.
 } */
 
-/* Logo and Header Directions on Same line */
+/* Logo and Header Directions compnents both in .box flexbox */
 
 .box {
   display: flex;
@@ -34,7 +34,7 @@ line 583 of this stylesheet was edited by Jesse
     width: 100%;
     flex-wrap: wrap; } }
 
-/* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit  - JM 07/10*/
+/* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit  - JM 07/20*/
 
 /* Tried to avoid edits to the below but everything below is was taken from nypl.org */
 

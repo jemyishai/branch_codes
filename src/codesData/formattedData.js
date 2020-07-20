@@ -1,4 +1,4 @@
-import branchCodes from './branchCodes.js';
+import branchCodes from './rawData.js';
 
 let data = [];
 let keys = Object.keys(branchCodes).sort();
