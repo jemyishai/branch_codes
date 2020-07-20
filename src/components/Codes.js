@@ -28,7 +28,6 @@ class Codes extends React.Component {
 					change={(evt) => this.onChange(evt, 'codeBranchInput')}
 				/>
 				<ul>
-				{/*DOUBLE CHECK BRONX LIBRARY CENTER CODE*/}
 					{branches.filter(this.filterCodes).map((object) => (
 						<li key={object.branch + 1}>
 							{object.branch} &nbsp; : &nbsp; {object.code}
@@ -46,8 +45,13 @@ class Codes extends React.Component {
 	}
 
 	onChange(evt, second) {
-		this.setState({ [second]: evt.target.value });
+		const regex = /[^a-zA-Z0-9']+/gi;
+		// const regex = /[\)\(\*\[\]\\\/\?]/gi;
+		let filteredInput = evt.target.value.replace(regex,'')
+
+		this.setState({ [second]: filteredInput });
 	}
+
 }
 
 export default Codes;
