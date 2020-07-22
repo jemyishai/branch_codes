@@ -14,7 +14,7 @@
 }
 
 .directions-padding {
-  padding: 1.5em 2em 0 2em;
+  padding: 1.5em 2em 0 -2em;
   font-weight: 2em;
 }
 
@@ -29,17 +29,13 @@ line 583 of this stylesheet was edited by Jesse
 
 /* line 6296 edited to eliminate excess white space in text field & 6355 to alter width of input box*/
 
-@media (max-width: 483px) {
-  .box {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-}
+/* My own simple media queries added at end of file */
 
 /* NYPL CSS BELOW - I COULD NOT SUCCESSFULLY INSTALL NYPL Design ToolKit  - JM 07/20*/
 
 /* Tried to avoid edits to the below but everything below is was taken from nypl.org */
+
+/* ____________________________________________ */
 
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -6352,7 +6348,7 @@ dl dd.multi-item-list .nypl-basic-table button[disabled="true"]:hover,
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  width: 85%;
+  width: 66%;
   -webkit-appearance: none;
 }
 
@@ -8001,8 +7997,9 @@ dl dd.multi-item-list .nypl-basic-table button[disabled="true"]:hover,
 }
 
 @media (max-width: 965px) {
+  /* altered by JEM */
   .nypl-homepage-hero p {
-    line-height: 2;
+    line-height: 1.2;
   }
 }
 
@@ -8672,7 +8669,8 @@ dl dd.multi-item-list .nypl-basic-table button[disabled="true"]:hover,
   border-collapse: collapse;
   display: table;
   position: relative;
-  width: 100%;
+  width: 66%;
+  margin-left:17%;
 }
 
 .nypl-basic-table tr {
@@ -11737,3 +11735,43 @@ hr::after {
 }
 
 /*# sourceMappingURL=example-styles.css.map */
+
+
+/*
+Jesse Media Query -  */
+
+@media (max-width: 483px) {
+  .nypl-basic-table {
+    border-collapse: collapse;
+    display: table;
+    position: relative;
+    width: 100%;
+    margin-left:0;
+  }
+  .box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .nypl-text-field input[type="text"],
+  .nypl-text-field input[type="email"],
+  .nypl-text-field input[type="date"],
+  .nypl-text-field input[type="number"] {
+      background-color: #fff;
+      border: 0;
+      -webkit-border-radius: 0.25rem;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      padding: 0;
+      -webkit-box-shadow: inset 0 0 0 1px #080807;
+      box-shadow: inset 0 0 0 1px #080807;
+      height: 1.5rem;
+      padding: 0.5rem 0;
+      text-indent: 0.5rem;
+      -webkit-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      width: 100%;
+      -webkit-appearance: none;
+    }
+}

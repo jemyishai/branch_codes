@@ -4,6 +4,7 @@ import React from "react";
 //table alignment with columns
 //get rid of second input
 //make a table
+//regex issue
 
 //Align Title
 //tests
@@ -17,6 +18,7 @@ let Input = (props) => (
       focus="true"
       placeholder={props.placeholder}
       className=""
+      pattern=""
       onChange={props.change}
     />
   </div>

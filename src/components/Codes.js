@@ -21,7 +21,7 @@ class Codes extends React.Component {
       <div>
         <div className="centered">
           <Input
-            placeholder={"Type branch ie... 'Bronx Library Center'"}
+            placeholder={"Seach branch name ie... 'Aguilar'"}
             change={(evt) => this.onChange(evt, "fullBranchInput")}
           />
           {/* This input is wired to filter based on branch code but is not necesary for UX reasons
@@ -38,13 +38,13 @@ class Codes extends React.Component {
   }
 
   filterCodes(input) {
-    const branchInput = new RegExp(this.state.fullBranchInput, "i");
-    const branchCodeInput = new RegExp(this.state.codeBranchInput, "i");
+    const branchInput = new RegExp(this.state.fullBranchInput, "ig");
+    const branchCodeInput = new RegExp(this.state.codeBranchInput, "ig");
     return branchInput.test(input.branch) && branchCodeInput.test(input.code);
   }
 
   onChange(evt, second) {
-    const regex = /[^a-zA-Z0-9']+/gi;
+    const regex = /[^\-a-zA-Z0-9' ]+/gi;
     let filteredInput = evt.target.value.replace(regex, "");
     this.setState({ [second]: filteredInput });
   }
