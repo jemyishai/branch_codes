@@ -20,6 +20,4 @@ function App() {
 	);
 }
 
-{/* need to add a warning around regexp entries */}
-
 export default App;
