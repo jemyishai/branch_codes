@@ -6352,7 +6352,7 @@ dl dd.multi-item-list .nypl-basic-table button[disabled="true"]:hover,
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  width: 75%;
+  width: 85%;
   -webkit-appearance: none;
 }
 

@@ -1,9 +1,11 @@
 import React from "react";
 
-///center and make % of width - 50% - input
+///center and make % of width - 50% - input check
 //table alignment with columns
 //get rid of second input
 //make a table
+
+//Align Title
 //tests
 //deploy
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./Input.js";
+import Table from "./Table.js";
 
 class Codes extends React.Component {
   constructor(props) {
@@ -17,40 +18,21 @@ class Codes extends React.Component {
   render() {
     const branches = this.props.branches;
     return (
-      <div className="centered">
-        <Input
-          placeholder={"Type branch ie... 'Bronx Library Center'"}
-          change={(evt) => this.onChange(evt, "fullBranchInput")}
-				/>
-				{/* This input is wired to filter based on branch code  but is not necesary for UX reasons
-
-        &nbsp; AND / OR &nbsp;
+      <div>
+        <div className="centered">
+          <Input
+            placeholder={"Type branch ie... 'Bronx Library Center'"}
+            change={(evt) => this.onChange(evt, "fullBranchInput")}
+          />
+          {/* This input is wired to filter based on branch code but is not necesary for UX reasons
+						&nbsp; AND / OR &nbsp;
         <Input
           placeholder={"Type branch code ie... 'BC'"}
           change={(evt) => this.onChange(evt, "codeBranchInput")}
 				/>
 				*/}
-				<table className="nypl-basic-table">
-				<thead>
-					<tr>
-						<th scope="col">Branch</th>
-						<th scope="col">Code</th>
-					</tr>
-				</thead>
-				<tbody>
-          {branches.filter(this.filterCodes).map((object) => (
-
-						<tr>
-								<td>
-								{object.branch}
-								</td>
-								<td>
-								{object.code}
-								</td>
-							</tr>
-          ))}
-					</tbody>
-				</table>
+        </div>
+        <Table branchInfo={branches} filter={this.filterCodes}/>
       </div>
     );
   }
