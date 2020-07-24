@@ -24,7 +24,7 @@ class Codes extends React.Component {
             placeholder={"Seach branch name ie... 'Aguilar'"}
             change={(evt) => this.onChange(evt, "fullBranchInput")}
           />
-          {/* This input is wired to filter based on branch code but is not necesary for UX reasons
+          {/* This input is wired to filter based on branch code, not branch name, but is not necesary for UX reasons.
 						&nbsp; AND / OR &nbsp;
         <Input
           placeholder={"Type branch code ie... 'BC'"}
@@ -32,7 +32,7 @@ class Codes extends React.Component {
 				/>
 				*/}
         </div>
-        <Table branchInfo={branches} filter={this.filterCodes}/>
+        <Table branchInfo={branches} filter={this.filterCodes} />
       </div>
     );
   }

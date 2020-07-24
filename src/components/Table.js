@@ -1,6 +1,6 @@
 import React from "react";
 
-let Table = ({branchInfo:branchCodes, filter:filtering}) => {
+let Table = ({ branchInfo: branchCodes, filter: filtering }) => {
   return (
     <div>
       <table className="nypl-basic-table">
@@ -12,9 +12,9 @@ let Table = ({branchInfo:branchCodes, filter:filtering}) => {
         </thead>
         <tbody>
           {branchCodes.filter(filtering).map((object) => (
-            <tr key={object.branch +1}>
-              <td >{object.branch}</td>
-              <td >{object.code}</td>
+            <tr key={object.branch + 1}>
+              <td>{object.branch}</td>
+              <td>{object.code}</td>
             </tr>
           ))}
         </tbody>

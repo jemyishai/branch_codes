@@ -4,7 +4,8 @@ const HeaderText = () => {
   return (
     <div>
       <p className="directions-padding">
-        NYPL Branch Code <br />Directory
+        NYPL Branch Code <br />
+        Directory
       </p>
     </div>
   );
