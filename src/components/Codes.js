@@ -21,7 +21,7 @@ class Codes extends React.Component {
       <div>
         <div className="centered">
           <Input
-            placeholder={"Seach branch name ie... 'Aguilar'"}
+            placeholder={"Search branch name ie... 'Aguilar'"}
             change={(evt) => this.onChange(evt, "fullBranchInput")}
           />
           {/* This input is wired to filter based on branch code, not branch name, but is not necesary for UX reasons.
