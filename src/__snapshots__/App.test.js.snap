@@ -66,7 +66,7 @@ exports[`should take a snapshot 1`] = `
               focus="true"
               id="keyword-text"
               pattern=""
-              placeholder="Seach branch name ie... 'Aguilar'"
+              placeholder="Search branch name ie... 'Aguilar'"
               type="text"
             />
           </div>
